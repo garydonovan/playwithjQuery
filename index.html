@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title>Gary Donovan's Webpage</title>
+		<link href="styles/main.css" rel="stylesheet" type="text/css"/>
+	</head>
+
+	<body>
+		<h1>Gary Donovan</h1>
+		<p>
+		<h5>See me on my penny farthing</h5>
+		</p>
+
+		<ul>
+			<li>Home</li>
+			<li><a href="http://techjaw.com">Techjaw </a></li>
+			<li><a href="http://takeagile.com">TakeAgile </a></li>
+			<li><a href="page2.html"> About Me</a></li>
+		</ul>
+		<input id="name" type="text">
+		<button id="clickHere">Annoying Search Button </button>
+
+		<script src="http://code.jquery.com/jquery-2.1.3.min.js">
+			</script>
+
+
+		<script>
+			$('#clickHere').click(function() {
+				var value = $('#name').val();
+				$('ul').append('<li>' + value + '</li>');
+
+			});
+
+			
+
+		</script>
+
+			
+
+	<body/>
+</html>
