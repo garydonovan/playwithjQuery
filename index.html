@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<title>Gary Donovan's Webpage</title>
+		<title>Cakes and Cookies</title>
 		<link rel="stylesheet" href="styles/main.css">
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -78,11 +78,11 @@
 
 	<div class="container">
 		<div class="jumbotron">
-			<h1>Tin Bak</h1>
-			<button id="btn1">#cupcake</button>
-			<button id="btn2">#cookie</button>
-			<button id="btn3">#donut</button>
-			<button id="btn4">#cwaffee</button>
+			<h1>Cakes And Cookies</h1>
+			<button class="panel-button" data-panelid="panel1">#cupcake</button>
+			<button class="panel-button" data-panelid="panel2">cookie</button>
+			<button class="panel-button" data-panelid="panel3">#donut</button>
+			<button class="panel-button" data-panelid="panel4">#cwaffee</button>
 		</div>
 
 		<div class="row">
@@ -135,7 +135,14 @@
 
 			$(function() {
 
-				$("#panel1").hide(300).show(1000);
+				var content = "Peanut Butter Cookies!!";
+
+				$('.panel-button').on('click', function(){
+					var panelId = $(this).attr('data-panelid');
+					$('#'+panelId).fadeToggle(200);
+					$('#'+panelId+' .panel-body').html(content);
+
+				});
 
 			});
 
